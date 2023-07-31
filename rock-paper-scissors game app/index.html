@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="hd"><h1>jatto!</h1></div>
+        <div class="container">
+            <div class="rock">
+                <p id="title">Rock</p>
+                <button id="btn" onclick="displayScore()" class="move-button">
+                    <img src="rock-emoji.png" alt="rock" class="icon">
+                </button>
+            </div>
+            <div class="paper">
+                <p>Paper</p>
+                <button id="paper" onclick="displayScore()" class="move-button">
+                        <img src="paper-emoji.png" alt="paper"  class="icon">
+                </button>
+            </div>
+            <div class="scissors">
+                <p>scissors</p>
+                <button id="scissors" onclick="displayScore()" class="move-button">
+                        <img src="scissors-emoji.png" alt="scissors" class="icon">
+                </button>
+            </div>
+        </div>
+        <p id="result" class="result"></p>
+        <p id="move">
+            You <img src="rock-emoji.png">
+            <img src="scissors-emoji.png"> Computer
+        </p>
+        <p id="score" class="score"></p>
+        <button id="reset" onclick="score.wins = 0; score.losses=0; score.ties=0; localStorage.removeItem('score'); displayScore()" class="btn">Reset Score</button>
+    </div>
+
+<script src="script.js"></script>    
+</body>
+</html>
